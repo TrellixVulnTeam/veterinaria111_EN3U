@@ -1,6 +1,6 @@
 const{Schema, model} = require('mongoose');
 
-new Schema({
+const NoteSchema = new Schema({
     nombre:{
         type: String,
         required: true
@@ -8,6 +8,11 @@ new Schema({
     raza: {
         type: String,
         required: true
-    },
-    
+    }
+    }, 
+    {
+ timestamps: true
+ 
 })
+
+model.exports = model ('Note', NoteSchema);
