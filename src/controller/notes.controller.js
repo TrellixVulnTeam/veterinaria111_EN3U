@@ -8,10 +8,11 @@ notesCtrl.renderNoteForm = (req,res) =>{
     res.render('notes/new-note');
 };
 
-notesCtrl.createNewNote = async (req, res) =>{
-    const{nombre, raza, edad, dueño, diagnostico} = req.body;
-  const newNote = new Note(req.body);
-    await newNote.save();
+notesCtrl.createNewNote = async (req, res) => {
+    const {nombre, raza, edad, dueño, diagnostico} = req.body;
+  const newNote = new Note ({nombre , raza , edad , dueno, diagnostico});
+    console.log(newNote);
+  await newNote.save();
     res.send('new note');
 };
 

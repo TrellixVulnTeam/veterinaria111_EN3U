@@ -9,15 +9,15 @@ const NoteSchema = new Schema({
         type: String,
         required: true
     },
-    Edad: {
+    edad: {
         type: Number,
         required: true
     },
-    Dueño: {
+    dueno: {
         type: String,
         required: true
     },
-    Diagnostico: {
+    diagnostico: {
         type: String,
         required: true
     }
