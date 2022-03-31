@@ -8,6 +8,18 @@ const NoteSchema = new Schema({
     raza: {
         type: String,
         required: true
+    },
+    Edad: {
+        type: Number,
+        required: true
+    },
+    Dueño: {
+        type: String,
+        required: true
+    },
+    Diagnostico: {
+        type: String,
+        required: true
     }
     }, 
     {
