@@ -2,12 +2,16 @@ const res = require("express/lib/response");
 
 const notesCtrl = {};
 
+const Note = require('../models/Note');
+
 notesCtrl.renderNoteForm = (req,res) =>{
     res.render('notes/new-note');
 };
 
-notesCtrl.createNewNote = (req, res) =>{
-    console.log(req.body)
+notesCtrl.createNewNote = async (req, res) =>{
+    const{nombre, raza, edad, dueño, diagnostico} = req.body;
+  const newNote = new Note(req.body);
+    await newNote.save();
     res.send('new note');
 };
 
